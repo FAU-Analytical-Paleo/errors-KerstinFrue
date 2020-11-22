@@ -61,3 +61,34 @@ par(mfrow=c(1,2))
 plot(ex3$r.in.m, xlab="measurement n", ylab=("r in m"), col = "orange", main="Estimated fault radius ")
 plot(ex3$Mo.in.Nm, xlab="measurement n", ylab=("Mo in Nm"), col="blue", main="Seismic moment [earthquake magnitude]")
 ?plot
+
+
+# 3 c) --------------------------------------------------------------------
+
+trim.r<-num_r[num_r<(median.r+(3*MAD.r))]
+trim.r
+num.r
+
+trim.Mo<-num_Mo[num_Mo<(median.Mo+(3*MAD.r))]
+trim.Mo
+num.Mo
+
+#Recalculating mean, median and standard deviation
+
+mean.trim.r<-mean(trim.r)
+median.trim.r<-median(trim.r)
+sd.trim.r<-sd(trim.r)
+
+round(mean.trim.r, digits=2)
+round(median.trim.r, digits=2)
+round(sd.trim.r, digits=2)
+
+  
+
+mean.trim.Mo<-mean(trim.Mo)
+median.trim.Mo<-median(trim.Mo)
+sd.trim.Mo<-sd(trim.Mo)
+
+round(mean.trim.Mo, digits=2)
+round(median.trim.Mo, digits=2)
+round(sd.trim.Mo, digits=2)
