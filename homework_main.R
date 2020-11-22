@@ -33,24 +33,31 @@ num_x<-as.numeric(ex3$X.in.km.)
 num_r<-as.numeric(ex3$r.in.m)
 num_Mo<-as.numeric(ex3$Mo.in.Nm)
 
+
+#Mean, median, standard deviation and MAD of r
+
 mean.r<-mean(num_r)
-mean.Mo<-mean(num_Mo)
-round(mean.r, digits=2)
-round(mean.Mo, digits=2)
-
 median.r<-median(num_r)
-median.Mo<-median(num_Mo)
-round(median.r, digits=2)
-round(median.Mo, digits=2)
-
 sd.r<-sd(num_r)
-sd.Mo<-sd(num_Mo)
-round(sd.r, digits=2)
-round(sd.Mo, digits=2)
-
 MAD.r<-mad(num_r)
-MAD.Mo<-mad(num_Mo)
+
+round(mean.r, digits=2)
+round(median.r, digits=2)
+round(sd.r, digits=2)
 round(MAD.r, digits=2)
+
+
+#Mean, median, standard deviation and MAD of Mo
+
+
+mean.Mo<-mean(num_Mo)
+median.Mo<-median(num_Mo)
+sd.Mo<-sd(num_Mo)
+MAD.Mo<-mad(num_Mo)
+
+round(mean.Mo, digits=2)
+round(median.Mo, digits=2)
+round(sd.Mo, digits=2)
 round(MAD.Mo, digits=2)
 
 
@@ -67,11 +74,11 @@ plot(ex3$Mo.in.Nm, xlab="measurement n", ylab=("Mo in Nm"), col="blue", main="Se
 
 trim.r<-num_r[num_r<(median.r+(3*MAD.r))]
 trim.r
-num.r
+num_r
 
 trim.Mo<-num_Mo[num_Mo<(median.Mo+(3*MAD.r))]
 trim.Mo
-num.Mo
+num_Mo
 
 #Recalculating mean, median and standard deviation
 
