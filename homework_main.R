@@ -1,6 +1,14 @@
 
 # Question 1 --------------------------------------------------------------
+radians <- function(d, m, s){
+  rad <- pi*(d+m/60+s/3600)/180
+  return(rad)
+}
 
+height <- tan(radians(1,21,0))*(2550)
+uncertainty_height <- (tan(radians(0,1,0))/tan(radians(1,21,0))+25/2550)*height
+print(height)
+print(uncertainty_height)
 
 # Question 2 --------------------------------------------------------------
 
