@@ -7,8 +7,8 @@ radians <- function(d, m, s){
 
 height <- tan(radians(1,21,0))*(2550)
 uncertainty_height <- (tan(radians(0,1,0))/tan(radians(1,21,0))+25/2550)*height
-print(height)
-print(uncertainty_height)
+round(height, digits=2)
+round(uncertainty_height, digits=2)
 
 # Question 2 --------------------------------------------------------------
 
@@ -35,22 +35,23 @@ num_Mo<-as.numeric(ex3$Mo.in.Nm)
 
 mean.r<-mean(num_r)
 mean.Mo<-mean(num_Mo)
-
+round(mean.r, digits=2)
+round(mean.Mo, digits=2)
 
 median.r<-median(num_r)
 median.Mo<-median(num_Mo)
-print(median.r)
-print(median.Mo)
+round(median.r, digits=2)
+round(median.Mo, digits=2)
 
 sd.r<-sd(num_r)
 sd.Mo<-sd(num_Mo)
-print(sd.r)
-print(sd.Mo)
+round(sd.r, digits=2)
+round(sd.Mo, digits=2)
 
 MAD.r<-mad(num_r)
 MAD.Mo<-mad(num_Mo)
-print(MAD.r)
-print(MAD.Mo)
+round(MAD.r, digits=2)
+round(MAD.Mo, digits=2)
 
 
 # 3 b) --------------------------------------------------------------------
