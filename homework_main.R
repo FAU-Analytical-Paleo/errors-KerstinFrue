@@ -100,3 +100,5 @@ sd.trim.Mo<-sd(trim.Mo)
 round(mean.trim.Mo, digits=2)
 round(median.trim.Mo, digits=2)
 round(sd.trim.Mo, digits=2)
+
+#hello
