@@ -14,6 +14,7 @@ round(uncertainty_height, digits=2)
 
 #25,53 +- 0,1 Ma ; (26600000 +- 100,000)
 #29,66 +- 0,2 Ma ; (25530000 +- 200,000)
+
 ((100000/26600000) + (200000/25530000))
 26600000 - 25530000
 
@@ -90,7 +91,7 @@ round(mean.trim.r, digits=2)
 round(median.trim.r, digits=2)
 round(sd.trim.r, digits=2)
 
-  
+
 
 mean.trim.Mo<-mean(trim.Mo)
 median.trim.Mo<-median(trim.Mo)
